@@ -23,3 +23,17 @@ parsedList.forEach((listEntry) => {
 });
 
 console.log(validPasswords);
+
+validPasswords = 0;
+
+parsedList.forEach((listEntry) => {
+  const posA = listEntry.min;
+  const posB = listEntry.max;
+  const posAMatch = listEntry.password.charAt(posA - 1) === listEntry.char;
+  const posBMatch = listEntry.password.charAt(posB - 1) === listEntry.char;
+  if (posAMatch ^ posBMatch) {
+    validPasswords += 1;
+  }
+});
+
+console.log(validPasswords);
