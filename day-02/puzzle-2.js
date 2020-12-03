@@ -1,5 +1,5 @@
 const fs = require("fs");
-const list = fs.readFileSync("puzzle-2-input.txt").toString().split("\n");
+const list = fs.readFileSync(`${__dirname}/puzzle-2-input.txt`).toString().split("\n");
 
 const parsedList = list.map((listEntry) => {
   const pattern = /(\d+)\-(\d+)\s(\w):\s(\w+)/;
