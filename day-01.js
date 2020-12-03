@@ -1,7 +1,7 @@
 // https://adventofcode.com/2020/day/1
 
 const fs = require("fs");
-const numbers = fs.readFileSync(`${__dirname}/puzzle-1-input.txt`).toString().split("\n");
+const numbers = fs.readFileSync(`${__dirname}/inputs/day-01.txt`).toString().split("\n");
 
 function findPair() {
   for (var i = 0; i < numbers.length; i++) {
