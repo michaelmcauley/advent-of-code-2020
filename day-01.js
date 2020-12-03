@@ -1,7 +1,8 @@
 // https://adventofcode.com/2020/day/1
 
-const fs = require("fs");
-const numbers = fs.readFileSync(`${__dirname}/inputs/day-01.txt`).toString().split("\n");
+const fileUtils = require("./utils/file-utils.js")
+
+const numbers = fileUtils.parseFileToIntegers(`${__dirname}/inputs/day-01.txt`);
 
 function findPair() {
   for (var i = 0; i < numbers.length; i++) {

@@ -1,5 +1,6 @@
-const fs = require("fs");
-const list = fs.readFileSync(`${__dirname}/inputs/day-02.txt`).toString().split("\n");
+const fileUtils = require("./utils/file-utils.js")
+
+const list = fileUtils.parseFileToLines(`${__dirname}/inputs/day-02.txt`);
 
 const parsedList = list.map((listEntry) => {
   const pattern = /(\d+)\-(\d+)\s(\w):\s(\w+)/;
