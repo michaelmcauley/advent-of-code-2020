@@ -31,6 +31,11 @@ const expect = (leftExpression) => {
       if (leftExpression != rightExpression) {
         throw new Error(`expected ${leftExpression} to equal ${rightExpression}`);
       }
+    },
+    toStrictlyEqual: function(rightExpression) {
+      if (leftExpression !== rightExpression) {
+        throw new Error(`expected ${leftExpression} to strictly equal ${rightExpression}`);
+      }
     }
   }
 }
