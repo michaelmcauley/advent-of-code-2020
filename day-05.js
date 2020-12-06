@@ -45,3 +45,11 @@ const passes = seats.map(seat => new BoardingPass(seat))
 const seatIds = passes.map(pass => pass.seatId)
 const highestSeatId = Math.max(...seatIds)
 console.log({ highestSeatId })
+
+const sortedSeatIds = seatIds.sort()
+for(i = 0; i < sortedSeatIds.length; i++) {
+  if (sortedSeatIds[i] === sortedSeatIds[i - 1] + 2) {
+    const missingSeatId = sortedSeatIds[i] - 1
+    console.log({ missingSeatId })
+  }
+}
